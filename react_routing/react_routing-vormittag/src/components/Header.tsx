@@ -1,14 +1,14 @@
-import './Header.css'
-import NavigationLink from './NavigationLink'
+import CustomNavigationLink from './NavigationLink'
 
 export default function Header() {
   return (
     <header className="bg-pink-500 p-2">
       <nav className="flex gap-2">
-        <NavigationLink to="/" text="Home" />
-        <NavigationLink to="/contact" text="Contact" />
-        <NavigationLink to="/about" text="About" />
-        <NavigationLink to="/blog" text="Blog" />
+        <CustomNavigationLink to="/" text="Home" />
+        <CustomNavigationLink to="/about" text="About" />
+        <CustomNavigationLink to="/blog" text="Blog" />
+        <CustomNavigationLink to="/pokemon" text="Pokémon" />
+        <CustomNavigationLink to="/contact" text="Contact" />
       </nav>
     </header>
   )
