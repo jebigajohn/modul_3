@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Banny;
+  src: url('./assets/fonts/Banny-Regular.woff');
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --font-banny: 'Banny', sans-serif;
+}
+
+body {
+  font-family: var(--font-banny);
+}

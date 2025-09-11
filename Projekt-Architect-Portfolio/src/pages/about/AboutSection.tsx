@@ -24,7 +24,7 @@ export default function AboutSection() {
           className="w-[270px] h-[345px]"
         />
       </div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 ">
         <HeroHeader text="About" />
         <p className="w-96">
           Lorem Ipsum is simply dummy text of the printing and typesetting

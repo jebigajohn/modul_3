@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Poppins;
+  src: url('../src/assets/fonts/Poppins-Medium.ttf');
+}
+@import 'tailwindcss';
+
+@theme {
+  --font-poppins: Poppins;
+}
+
+:root {
+  font-size: 100%;
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  color: white;
+  --bg-color-movies: rgba(255, 255, 255, 0.082);
+  --bg-color-header: linear-gradient(to bottom, black, #8b0000);
+  --bg-hover-buttons: rgba(255, 255, 255, 0.568);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url('/cinema2.jpg') center/cover no-repeat fixed;
+}
+
+header {
+  background: var(--bg-color-header);
+}

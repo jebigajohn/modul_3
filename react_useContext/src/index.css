@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.light a {
+  color: red;
+}
+
+.dark a {
+  color: yellow;
+}
+
+main {
+  height: 100vh;
+}

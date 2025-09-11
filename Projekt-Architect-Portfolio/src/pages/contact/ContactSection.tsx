@@ -1,11 +1,23 @@
 import React from 'react'
 
+interfaceZ
+
 export default function ContactSection() {
+  const inputClass = () => {
+    ;``
+  }
+
   return (
     <div className="flex">
-      <div>
+      <div className="flex flex-col">
         <form>
-          <input type="text" name="" id="" />
+          <input
+            className="bg-[#F3F3F3] pl-4 py-4 w-96 "
+            type="text"
+            name=""
+            id=""
+            placeholder="Name"
+          />
           <input type="tel" name="" id="" />
           <input type="email" name="" id="" />
           <input type="text" name="" id="" />
