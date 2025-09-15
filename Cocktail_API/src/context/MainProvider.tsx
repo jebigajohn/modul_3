@@ -18,6 +18,7 @@ export default function MainProvider({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [drinks, setDrinks] = useState<Drink[]>([])
   const [link, setLink] = useState<string>('')
+  const [category, setCategory] = useState<string>('')
 
   useEffect(() => {
     const getData = async () => {
@@ -26,23 +27,25 @@ export default function MainProvider({
         return
       }
 
-      const url =
-        link === 'margarita'
-          ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-          : link === 'vodka'
-          ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka'
-          : link === 'gin'
-          ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin'
-          : link === 'rum'
-          ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=rum'
-          : link === 'scotch'
-          ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=scotch'
-          : ''
+      // #⤵️ V1 (vorheriger Code um nur bestimmte Cocktails zu rendern)
+      // link === 'margarita'
+      //   ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
+      //   : link === 'vodka'
+      //   ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka'
+      //   : link === 'gin'
+      //   ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin'
+      //   : link === 'rum'
+      //   ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=rum'
+      //   : link === 'scotch'
+      //   ? 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=scotch'
+      //   : ''
+      // if (!url) {
+      //   setDrinks([])
+      //   return
+      // }
 
-      if (!url) {
-        setDrinks([])
-        return
-      }
+      // # V2 Code um mit search input nach Cocktails zu suchen
+      const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${link}`
 
       try {
         const resp = await axios.get(url)

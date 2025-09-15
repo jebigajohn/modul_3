@@ -3,4 +3,36 @@
   src: url(./assets/fonts/PlayfairDisplay-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: PlayfairDisplayItalic;
+  src: url(./assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf)
+    format('truetype');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
 @import 'tailwindcss';
+
+@theme {
+  --font-family: 'PlayfairDisplay', serif;
+}
+
+@theme {
+  --font-family: 'Montserrat', sans-serif;
+}
+
+a,
+p,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'PlayfairDisplay', serif;
+}
+h2 {
+  font-family: 'PlayfairDisplayItalic', serif;
+}
