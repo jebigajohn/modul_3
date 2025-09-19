@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --mint: #96c0b7;
+  --sage: #d4dfc7;
+  --stone: #878e88;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
